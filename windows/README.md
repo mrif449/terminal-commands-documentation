@@ -18,8 +18,8 @@
 <li>Check Disk: <code>chkdsk /f</code> or <code>chkdsk /r</code></li>
 <li>Check System Files: <code>sfc /scannow</code></li>
 <li>Check Device Health: <code>DISM /Online /Cleanup-Image /CheckHealth</code></li>
-<li>Scan Device Health<code>DISM /Online /Cleanup-Image /ScanHealth</code></li>
-<li>Restore Devive Health<code>DISM /Online /Cleanup-Image /RestoreHealth</code></li>
+<li>Scan Device Health: <code>DISM /Online /Cleanup-Image /ScanHealth</code></li>
+<li>Restore Devive Health: <code>DISM /Online /Cleanup-Image /RestoreHealth</code></li>
 <li>Get Device Task List: <code>tasklist | findstr script</code></li>
 <li>Kill Task Using Task ID: <code>taskkill /f /pid 12345</code></li>
 <li>Get Wireless Network Report: <code>netsh wlan show wlanreport</code></li>
@@ -36,27 +36,12 @@
 <li>Add Routes: <code>route add 192.168.0.1 mask 255.255.255.1 10.1.1.1</code></li>
 <li>Delete Route: <code>route delete 192.168.0.1</code></li>
 <li>Restart to System BIOS: <code>shutdown /r /fw /f /t 0</code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code></code></li>
+<li>Always open command prompt in admninistrator Mode: <code>runas /user:Administrator cmd</code></li>
+<li>Hide a Folder: <code>attrib +h +s +r foldername</code></li>
+<li>Unhide a Folder:<code>attrib -h -s -r foldername</code></li>
+<li>Save Output of a Command to a File<code>command >> output.txt</code></li>
+<li>Create a Batch File: <code>for /F "tokens=2 delims=:" %a in ('netsh wlan show profile') do @(set wifi_pwd= & for /F "tokens=2 delims=: usebackq" %F IN ( netsh wlan show profile %a key^=clear ^| find "Key Content" ) do @(set wifi_pwd=%F) & echo %a :
+!wifi_pwd!)</code></li>
+<li>Display Detailed System operating and configuration: <code>systeminfo</code></li>
+<li>Removee Mounterd Drive: <code>subst /e q:</code></li>
 </ol>
